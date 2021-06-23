@@ -11,10 +11,21 @@ function writePassword() {
 }
 function generatePassword(){
   prompts();
+  funArray = [];
+
 }
 
+function upper(){
 
+}
 
+function lower(){
+
+}
+
+function special(){
+
+}
 function prompts(){
   charLength = window.prompt("How many characters would you like your password?[between 8 and 128 characters]: ");
   if(charLength < 8 || charLength > 128){
@@ -25,8 +36,15 @@ function prompts(){
   }
   wantUpper = window.confirm("Do you want upper case letters?");
   wantLower = window.confirm("Do you want lower cases letters?");
-  wantSpecial = window.confirm("Do you want special characters?");
-  
+  wantSpecial = window.confirm("Do you want special characters?");  
+  return wantUpper, wantLower, wantSpecial;
 }
+
+
+
+
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
