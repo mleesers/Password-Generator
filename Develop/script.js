@@ -61,6 +61,7 @@ function special(){
   }
   return character;
 }
+
 function prompts(){
   charLength = window.prompt("How many characters would you like your password?[between 8 and 128 characters]: ");
   if(charLength < 8 || charLength > 128){
