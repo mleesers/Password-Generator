@@ -31,15 +31,20 @@ function generatePassword(){
   }
 
   while(n != charLength){
-    n += 1;
     funArray[Math.floor(Math.random() * funArray.length)];
     password.concat(character);
+    n += 1;
   }
-  return password
+  return password;
 }
 
 function upper(){
-
+  character = "";
+  list = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  for (i=0;i<1;i++){
+    character += list.charAt(Math.floor(Math.random() *list.length));
+  }
+  return character;
 }
 
 function lower(){
