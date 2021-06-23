@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -12,6 +12,8 @@ function writePassword() {
 function generatePassword(){
   prompts();
   funArray = [];
+  n = 0;
+  password = ""
   if(wantUpper = true){
     funArray.push(upper());
   }else{
@@ -28,6 +30,12 @@ function generatePassword(){
     continue;
   }
 
+  while(n != charLength){
+    n += 1;
+    funArray[Math.floor(Math.random() * funArray.length)];
+    password.concat(character);
+  }
+  return password
 }
 
 function upper(){
@@ -52,7 +60,7 @@ function prompts(){
   wantUpper = window.confirm("Do you want upper case letters?");
   wantLower = window.confirm("Do you want lower cases letters?");
   wantSpecial = window.confirm("Do you want special characters?");  
-  return wantUpper, wantLower, wantSpecial;
+  return wantUpper, wantLower, wantSpecial,charLength;
 }
 
 
