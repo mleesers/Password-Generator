@@ -12,6 +12,21 @@ function writePassword() {
 function generatePassword(){
   prompts();
   funArray = [];
+  if(wantUpper = true){
+    funArray.push(upper());
+  }else{
+    continue;
+  }
+  if(wantLower == true){
+    funArray.push(lower());
+  }else{
+    continue;
+  }
+  if(wantSpecial == true){
+    funArray.push(lower());
+  }else{
+    continue;
+  }
 
 }
 
