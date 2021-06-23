@@ -12,12 +12,10 @@ function writePassword() {
 }
 function generatePassword(){
   prompts();
-  funArray = [];
   n = 0;
   password = "";
-
-  console.log(funArray)
   while(n != charLength){
+    funArray = [];
     if(wantUpper == true){
       funArray.push(upper());
     }
