@@ -48,10 +48,16 @@ function upper(){
 }
 
 function lower(){
-
+  character = "";
+  list = "abcdefghijklmnopqrstuvwxyz";
+  for (i=0;i<1;i++){
+    character += list.charAt(Math.floor(Math.random() *list.length));
+  }
+  return character;
 }
 
 function special(){
+  
 
 }
 function prompts(){
